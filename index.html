@@ -1,40 +1,11 @@
 <html>
 	<head>
 		<title>Facebook banner</title>
-		<style>
-			#header {
-				width: 944px;
-				height: 520px;
-				overflow: hidden;
-				text-align: center;
-				background: black;
-				color: white;
-			}
-
-			#header img {
-				width: 19.6px;
-				border-radius: 15px;	
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript">
-			var strFBGraph = "https://graph.facebook.com/";
-			var strAccessToken = "239199982824315|3L1T4SUoHU7KPXUB3UiEhPnsTns";
-			var strGroupId = "206265449388631";
-			var strUrl = strFBGraph + strGroupId + "/members?access_token=" + strAccessToken;
-			$.getJSON( strUrl, function( listMembers ) {
-				var strImg = "";
-				for( intIndex in listMembers.data ){
-					strMemberId = listMembers.data[ intIndex ]['id'];
-					strImg += "<img src='"+ strFBGraph + strMemberId +"/picture' />";
-				}
-				$("#header").html( strImg );
-			});
-		</script>
-		
+		<script type="text/javascript" src="js/main.js">	</script>
 	</head>
-	
 	<body>
-		<div id="header"> <h1>Cargando  ...</h1> </div>
+		<div id="banner"> <h1>Cargando  ...</h1> </div>
 	</body>
 </html>
